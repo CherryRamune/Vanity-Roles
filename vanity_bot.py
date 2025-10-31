@@ -1,12 +1,9 @@
-import discord
-from discord import app_commands
-from discord.ext import commands, tasks
-import json
 import os
-import re
 
-import os
 TOKEN = os.getenv("TOKEN")
+
+import discord
+from discord.ext import commands
 
 print("TOKEN LOADED:", TOKEN is not None)
 
@@ -154,4 +151,5 @@ async def vanity_palette(interaction: discord.Interaction):
 
 
 bot.run(TOKEN)
+
 
