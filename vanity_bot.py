@@ -8,6 +8,8 @@ import re
 import os
 TOKEN = os.getenv("TOKEN")
 
+print("TOKEN LOADED:", TOKEN is not None)
+
 DATA_FILE = "vanity_roles.json"
 
 intents = discord.Intents.default()
@@ -152,3 +154,4 @@ async def vanity_palette(interaction: discord.Interaction):
 
 
 bot.run(TOKEN)
+
