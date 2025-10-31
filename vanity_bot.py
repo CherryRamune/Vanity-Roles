@@ -147,11 +147,4 @@ async def vanity_palette(interaction: discord.Interaction):
     formatted = "\n".join(colors)
     await interaction.response.send_message(f"🎨 **Nice color ideas:**\n{formatted}", ephemeral=True)
 
-
-
 bot.run(TOKEN)
-
-
-
-
-
