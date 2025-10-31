@@ -1,6 +1,6 @@
 import os
-import json   # ← ADD THIS
-import re     # ← AND THIS
+import json
+import re
 import discord
 from discord.ext import commands, tasks
 from discord import app_commands
@@ -150,4 +150,5 @@ async def vanity_palette(interaction: discord.Interaction):
     await interaction.response.send_message(f"🎨 **Nice color ideas:**\n{formatted}", ephemeral=True)
 
 bot.run(TOKEN)
+
 
