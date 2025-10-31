@@ -6,7 +6,9 @@ from discord.ext import commands, tasks
 from discord import app_commands
 
 TOKEN = os.getenv("TOKEN")
-print("DEBUG | TOKEN VALUE:", TOKEN)
+
+print("ENV LIST:", list(os.environ.keys()))
+print("TOKEN VALUE:", repr(TOKEN))
 
 DATA_FILE = "vanity_roles.json"
 
@@ -150,5 +152,6 @@ async def vanity_palette(interaction: discord.Interaction):
     await interaction.response.send_message(f"🎨 **Nice color ideas:**\n{formatted}", ephemeral=True)
 
 bot.run(TOKEN)
+
 
 
