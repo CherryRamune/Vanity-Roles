@@ -116,10 +116,10 @@ async def vanity(interaction: discord.Interaction, name: str, color_hex: str):
         await member.add_roles(role, reason="Vanity role assignment")
 
     # Optional: Match nickname to vanity role name
-    try:
-        await member.edit(nick=name)
-    except:
-        pass  # no permissions to change nick — ignore
+    # try:
+    #    await member.edit(nick=name)
+    # except:
+    #    pass  # no permissions to change nick — ignore
 
     await interaction.response.send_message(f"✅ Vanity role updated to **{name}** ({color_hex})", ephemeral=True)
 
@@ -152,6 +152,7 @@ async def vanity_palette(interaction: discord.Interaction):
     await interaction.response.send_message(f"🎨 **Nice color ideas:**\n{formatted}", ephemeral=True)
 
 bot.run(TOKEN)
+
 
 
 
