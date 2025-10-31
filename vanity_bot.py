@@ -1,12 +1,10 @@
 import os
-
-TOKEN = os.getenv("TOKEN")
-
 import discord
 from discord.ext import commands, tasks
 from discord import app_commands
 
-print("TOKEN LOADED:", TOKEN is not None)
+TOKEN = os.getenv("TOKEN")
+print("DEBUG | TOKEN VALUE:", TOKEN)
 
 DATA_FILE = "vanity_roles.json"
 
@@ -152,6 +150,7 @@ async def vanity_palette(interaction: discord.Interaction):
 
 
 bot.run(TOKEN)
+
 
 
 
