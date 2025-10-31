@@ -5,7 +5,8 @@ import json
 import os
 import re
 
-TOKEN = "MTQzMzY0MzAwNzEyNjY2NzI3NQ.Grb2fh.JSz1JDUREfkZyA0dHz8ocET4lQdnJbS3coS-qg"
+import os
+TOKEN = os.getenv("TOKEN")
 
 DATA_FILE = "vanity_roles.json"
 
@@ -147,6 +148,7 @@ async def vanity_palette(interaction: discord.Interaction):
     ]
     formatted = "\n".join(colors)
     await interaction.response.send_message(f"🎨 **Nice color ideas:**\n{formatted}", ephemeral=True)
+
 
 
 bot.run(TOKEN)
